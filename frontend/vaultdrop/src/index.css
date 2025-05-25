@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Cinzel:wght@400..900&family=Gruppo&family=Instrument+Serif:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oranienbaum&family=Pacifico&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Uncial+Antiqua&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-*: initial;
+  
+  --color-light-bg: #eef1f6;
+  --color-light-text: #1E293B;
+  --color-light-button: #60A5FA;
+  --color-light-card: #FFFFFF;
+  --color-light-border: #E2E8F0;
+
+  --color-dark-bg: #0F172A;
+  --color-dark-text: #F1F5F9;
+  --color-dark-button: #3B82F6;
+  --color-dark-card: #1E293B;
+  --color-dark-border: #1E293B;
+
+  --color-delete: #d11a2a;
+}
+
+.font-logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.font-body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+
+.navbarOpen {
+  @apply right-0;
+}
+
+.primary-button {
+  @apply bg-light-button dark:bg-dark-button
+          px-5 py-3 md:px-6 md:py-4
+          text-lg md:text-xl lg:text-2xl
+          cursor-pointer hover:bg-light-button/80 dark:hover:bg-dark-button/80 transition-all
+          rounded-xl md:rounded-2xl;
+}
+
+.delete-button {
+  @apply bg-delete
+          px-5 py-3 md:px-6 md:py-4
+          text-lg md:text-xl lg:text-2xl
+          cursor-pointer hover:bg-delete/80 transition-all
+          rounded-xl md:rounded-2xl;
+}
+
+.input {
+  @apply bg-light-card dark:bg-dark-card
+          w-full p-3 lg:p-4 rounded-xl md:rounded-2xl;
+}
+
+.navbarLink {
+  @apply border-b-2 p-4 md:p-6 lg:p-8 md:text-xl;
+}
